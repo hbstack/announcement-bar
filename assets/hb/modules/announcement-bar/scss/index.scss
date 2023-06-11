@@ -1,0 +1,47 @@
+/*! purgecss start ignore */
+$hb-announcement-bar-bg: $primary !default;
+$hb-announcement-bar-color: #fff !default;
+
+.hb-announcement-bar {
+    background: $hb-announcement-bar-bg;
+    color: $hb-announcement-bar-color;
+
+    a {
+        color: $hb-announcement-bar-color;
+    }
+}
+
+.hb-announcement {
+    display: none;
+
+    &.active {
+        display: block;
+        animation: hb-announcement-in .5s ease;
+    }
+
+    &.inactivating {
+        animation: hb-announcement-out .5s ease;
+    }
+}
+
+@keyframes hb-announcement-in {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes hb-announcement-out {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+/*! purgecss end ignore */

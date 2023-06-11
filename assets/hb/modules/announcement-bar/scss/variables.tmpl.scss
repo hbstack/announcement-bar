@@ -1,0 +1,6 @@
+{{- with site.Params.hb.announcement_bar.bg }}
+$hb-announcement-bar-bg: {{ site.Params.hb.announcement_bar.bg }};
+{{- end }}
+{{- with site.Params.hb.announcement_bar.color }}
+$hb-announcement-bar-color: {{ site.Params.hb.announcement_bar.color }};
+{{- end }}

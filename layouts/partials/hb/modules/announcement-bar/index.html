@@ -1,0 +1,9 @@
+{{- with index site.Data.announcements site.Language.LanguageCode }}
+<div class="hb-announcement-bar text-center px-1 py-2">
+    {{- range $i, $v := sort . "weight" }}
+    <div class="hb-announcement{{ cond (eq $i 0) ` active` `` }}">
+        {{- $v.title | markdownify -}}
+    </div>
+    {{- end }}
+</div>
+{{- end }}

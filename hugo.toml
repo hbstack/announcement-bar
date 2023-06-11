@@ -1,0 +1,14 @@
+# [module.hugoVersion]
+# min = "0.111.3"
+
+[[module.imports]]
+path = "github.com/hbstack/hb"
+
+[params.hb.announcement_bar]
+# bg = "#dc3545"
+# color = "#fff"
+interval = 5000
+
+[params.hugopress.modules.hb-announcement-bar.hooks.hb-body-begin]
+cacheable = true
+weight = 1
