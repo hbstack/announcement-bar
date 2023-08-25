@@ -1,13 +1,17 @@
 /*! purgecss start ignore */
-$hb-announcement-bar-bg: $primary !default;
-$hb-announcement-bar-color: #fff !default;
+.hb-header-nav {
+    flex-direction: column;
+}
 
 .hb-announcement-bar {
-    background: $hb-announcement-bar-bg;
-    color: $hb-announcement-bar-color;
+    --#{$prefix}border-opacity: 0.125;
+
+    color: var(--#{$prefix}navbar-color);
+    margin-bottom: var(--#{$prefix}navbar-padding-y);
+    padding-bottom: var(--#{$prefix}navbar-padding-y);
 
     a {
-        color: $hb-announcement-bar-color;
+        color: var(--#{$prefix}navbar-active-color);
     }
 }
 
