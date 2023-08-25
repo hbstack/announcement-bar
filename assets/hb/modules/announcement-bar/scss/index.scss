@@ -3,18 +3,6 @@
     flex-direction: column;
 }
 
-.hb-announcement-bar {
-    --#{$prefix}border-opacity: 0.125;
-
-    color: var(--#{$prefix}navbar-color);
-    margin-bottom: var(--#{$prefix}navbar-padding-y);
-    padding-bottom: var(--#{$prefix}navbar-padding-y);
-
-    a {
-        color: var(--#{$prefix}navbar-active-color);
-    }
-}
-
 .hb-announcement {
     display: none;
 
@@ -25,6 +13,38 @@
 
     &.inactivating {
         animation: hb-announcement-out .5s ease;
+    }
+}
+
+.hb-announcement-bar {
+    --#{$prefix}border-opacity: 0.125;
+
+    color: var(--#{$prefix}navbar-color);
+    margin-bottom: var(--#{$prefix}navbar-padding-y);
+    padding-bottom: var(--#{$prefix}navbar-padding-y);
+    transition: .25s ease-in-out;
+
+    a {
+        color: var(--#{$prefix}navbar-active-color);
+    }
+
+    &:hover {
+        background: var(--#{$prefix}body-bg);
+        color: var(--#{$prefix}body-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 30vh;
+        overflow: auto!important;
+        padding-top: var(--#{$prefix}navbar-padding-y);
+        position: fixed;
+        top: 0;
+        z-index: 1031;
+        
+        .hb-announcement {
+            display: block!important;
+            margin-bottom: .25rem;
+        }
     }
 }
 
