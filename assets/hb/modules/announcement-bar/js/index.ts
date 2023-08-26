@@ -14,6 +14,7 @@ import * as params from '@params'
     }
 
     const setTimer = (): void => {
+      clearTimer()
       let i = 0
       timer = setInterval(() => {
         announcements[i].classList.add('inactivating')
