@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/hbstack/announcement-bar/compare/v0.2.1...v0.2.2) (2023-08-26)
+
+
+### Bug Fixes
+
+* make sure clearing previous timer when creating a new timer ([581fc1e](https://github.com/hbstack/announcement-bar/commit/581fc1e996f3f3df1321ba60cbbd0b91c306c474))
+
 ## [0.2.1](https://github.com/hbstack/announcement-bar/compare/v0.2.0...v0.2.1) (2023-08-26)
 
 
