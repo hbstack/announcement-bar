@@ -22,7 +22,7 @@
     color: var(--#{$prefix}navbar-color);
     margin-bottom: var(--#{$prefix}navbar-padding-y);
     padding-bottom: var(--#{$prefix}navbar-padding-y);
-    transition: .3s ease-in-out;
+    transition: .5s ease-in-out;
 
     a {
         color: var(--#{$prefix}navbar-active-color);
@@ -34,12 +34,10 @@
         max-height: 30vh;
         overflow: auto!important;
         padding-top: var(--#{$prefix}navbar-padding-y);
-        position: fixed;
-        top: 0;
-        z-index: 1031;
         
         .hb-announcement {
             display: block!important;
+            transition: .5s ease-in-out;
             margin-bottom: .25rem;
         }
     }
