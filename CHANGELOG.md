@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.4](https://github.com/hbstack/announcement-bar/compare/v0.2.3...v0.2.4) (2023-08-27)
+
+
+### Styles 🎨
+
+* minor changes ([3bcfcb6](https://github.com/hbstack/announcement-bar/commit/3bcfcb6ebdd428d6cce2d38ddd6f54a9978266ad))
+
 ## [0.2.3](https://github.com/hbstack/announcement-bar/compare/v0.2.2...v0.2.3) (2023-08-26)
 
 
