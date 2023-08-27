@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.5](https://github.com/hbstack/announcement-bar/compare/v0.2.4...v0.2.5) (2023-08-27)
+
+
+### Styles 🎨
+
+* tweak transition ([2ef2991](https://github.com/hbstack/announcement-bar/commit/2ef2991d985ae644bb9c127bc1bef08d06081e97))
+* use default color and background on hover ([cb09f7b](https://github.com/hbstack/announcement-bar/commit/cb09f7ba224e8bc90d37ac1cb606f88f8a8b715d))
+
 ## [0.2.4](https://github.com/hbstack/announcement-bar/compare/v0.2.3...v0.2.4) (2023-08-27)
 
 
