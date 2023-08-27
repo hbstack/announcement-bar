@@ -32,8 +32,6 @@
     }
 
     &:hover {
-        background: var(--#{$prefix}body-bg);
-        color: var(--#{$prefix}body-color);
         max-height: 30vh;
         overflow: auto!important;
         padding-top: var(--#{$prefix}navbar-padding-y);
