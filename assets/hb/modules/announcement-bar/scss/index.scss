@@ -1,6 +1,11 @@
 /*! purgecss start ignore */
 .hb-header-nav {
     flex-direction: column;
+    padding-top: 0;
+
+    .container-fluid {
+        padding-top: var(--#{$prefix}navbar-padding-y);
+    }
 }
 
 .hb-announcement {
@@ -20,8 +25,6 @@
     --#{$prefix}border-opacity: 0.125;
 
     color: var(--#{$prefix}navbar-color);
-    margin-bottom: var(--#{$prefix}navbar-padding-y);
-    padding-bottom: var(--#{$prefix}navbar-padding-y);
     transition: .5s ease-in-out;
 
     a {
@@ -37,7 +40,6 @@
         
         .hb-announcement {
             display: block!important;
-            transition: .5s ease-in-out;
             margin-bottom: .25rem;
         }
     }
