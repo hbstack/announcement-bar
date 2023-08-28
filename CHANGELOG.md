@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/hbstack/announcement-bar/compare/v0.2.5...v0.3.0) (2023-08-28)
+
+
+### Features ✨
+
+* add the expand_stall_threshold parameter ([#26](https://github.com/hbstack/announcement-bar/issues/26)) ([5afe506](https://github.com/hbstack/announcement-bar/commit/5afe506627ba079edd853c8a5ca0937cd0a1c729))
+
 ## [0.2.5](https://github.com/hbstack/announcement-bar/compare/v0.2.4...v0.2.5) (2023-08-27)
 
 
