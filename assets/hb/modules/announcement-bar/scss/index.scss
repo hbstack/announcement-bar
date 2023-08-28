@@ -30,7 +30,7 @@
         color: var(--#{$prefix}navbar-active-color);
     }
 
-    &:hover {
+    &.active {
         max-height: 30vh;
         overflow: auto!important;
         padding-top: var(--#{$prefix}navbar-padding-y);

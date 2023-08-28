@@ -2,9 +2,14 @@ import * as params from '@params'
 
 (() => {
   let timer = 0
+  let expandTimeout = 0
 
   const clearTimer = (): void => {
     clearInterval(timer)
+  }
+
+  const clearExpandTimeout = (): void => {
+    clearTimeout(expandTimeout)
   }
 
   document.addEventListener('DOMContentLoaded', () => {
@@ -27,14 +32,24 @@ import * as params from '@params'
       }, params.announcement_bar.interval ?? 5000)
     }
 
+    const expanding = (): void => {
+      clearExpandTimeout()
+      expandTimeout = setTimeout(() => {
+        bar.classList.add('active')
+      }, params.announcement_bar.expand_stall_threshold ?? 500)
+    }
+
     setTimer()
 
     const bar = document.querySelector('.hb-announcement-bar') as HTMLElement
     bar.addEventListener('mouseover', () => {
       clearTimer()
+      expanding()
     })
     bar.addEventListener('mouseout', () => {
       setTimer()
+      clearExpandTimeout()
+      bar.classList.remove('active')
     })
   })
 })()
