@@ -42,11 +42,11 @@ import * as params from '@params'
     setTimer()
 
     const bar = document.querySelector('.hb-announcement-bar') as HTMLElement
-    bar.addEventListener('mouseover', () => {
+    bar.addEventListener('mouseenter', () => {
       clearTimer()
       expanding()
     })
-    bar.addEventListener('mouseout', () => {
+    bar.addEventListener('mouseleave', () => {
       setTimer()
       clearExpandTimeout()
       bar.classList.remove('active')
