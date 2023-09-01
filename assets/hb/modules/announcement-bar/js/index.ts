@@ -1,6 +1,7 @@
 import * as params from '@params'
 
 (() => {
+  let activeItem = 0
   let timer = 0
   let expandTimeout = 0
 
@@ -20,14 +21,13 @@ import * as params from '@params'
 
     const setTimer = (): void => {
       clearTimer()
-      let i = 0
       timer = setInterval(() => {
-        announcements[i].classList.add('inactivating')
+        announcements[activeItem].classList.add('inactivating')
         setTimeout(() => {
-          announcements[i].classList.remove('active', 'inactivating')
-          i = ++i
-          i = i < announcements.length ? i : i % announcements.length
-          announcements[i].classList.add('active')
+          announcements[activeItem].classList.remove('active', 'inactivating')
+          activeItem = ++activeItem
+          activeItem = activeItem < announcements.length ? activeItem : activeItem % announcements.length
+          announcements[activeItem].classList.add('active')
         }, 200)
       }, params.announcement_bar.interval ?? 5000)
     }
