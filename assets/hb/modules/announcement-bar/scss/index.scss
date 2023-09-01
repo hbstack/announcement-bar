@@ -27,7 +27,7 @@
     color: var(--#{$prefix}navbar-color);
 
     a {
-        color: var(--#{$prefix}navbar-active-color);
+        color: var(--#{$prefix}navbar-color);
     }
 
     &.active {
