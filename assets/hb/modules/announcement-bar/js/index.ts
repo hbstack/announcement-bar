@@ -36,7 +36,7 @@ import * as params from '@params'
       clearExpandTimeout()
       expandTimeout = setTimeout(() => {
         bar.classList.add('active')
-      }, params.announcement_bar.expand_stall_threshold ?? 500)
+      }, params.announcement_bar.expand_stall_threshold ?? 1000)
     }
 
     setTimer()
