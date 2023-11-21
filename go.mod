@@ -8,5 +8,5 @@ require (
 	github.com/hbstack/header v0.12.1 // indirect
 	github.com/hugomods/icons v0.6.0 // indirect
 	github.com/hugomods/icons/vendors/bootstrap v0.5.1 // indirect
-	github.com/twbs/icons v1.11.1 // indirect
+	github.com/twbs/icons v1.11.2 // indirect
 )
