@@ -1,5 +1,34 @@
 # Changelog
 
+## [0.4.2](https://github.com/hbstack/announcement-bar/compare/v0.4.1...v0.4.2) (2024-05-24)
+
+
+### Continuous Integration
+
+* **deps:** update module github.com/hbstack/hb to v0.10.0 ([5fec468](https://github.com/hbstack/announcement-bar/commit/5fec468f400b2c7c49e604b3e1738a9fde742cdd))
+* **deps:** update module github.com/hbstack/hb to v0.7.2 ([e8cde3c](https://github.com/hbstack/announcement-bar/commit/e8cde3c64e023bc1c7cef1a911ab0e7f35e635fc))
+* **deps:** update module github.com/hbstack/hb to v0.8.0 ([667b990](https://github.com/hbstack/announcement-bar/commit/667b990f3d540c35f4637431c44fe613da54c56c))
+* **deps:** update module github.com/hbstack/hb to v0.8.1 ([f08cf6d](https://github.com/hbstack/announcement-bar/commit/f08cf6d09ddee229280f722f58597bec50f55626))
+* **deps:** update module github.com/hbstack/hb to v0.9.0 ([f034671](https://github.com/hbstack/announcement-bar/commit/f0346718f189135695ef5b365e38a8d3eac73437))
+* **deps:** update module github.com/hbstack/hb to v0.9.1 ([c1e45ac](https://github.com/hbstack/announcement-bar/commit/c1e45ac73f5c3a181847c2b175478b2b5a851afd))
+* **deps:** update module github.com/hbstack/hb to v0.9.2 ([3fca9c7](https://github.com/hbstack/announcement-bar/commit/3fca9c72fb89c9eb686f13de5509afa6a2954f2e))
+* **deps:** update module github.com/hbstack/header to v0.10.1 ([41c2518](https://github.com/hbstack/announcement-bar/commit/41c2518b22549a511185ce674f25edca1940e698))
+* **deps:** update module github.com/hbstack/header to v0.11.0 ([09ec561](https://github.com/hbstack/announcement-bar/commit/09ec5618608aed2754f4c25c000c6e03cbcb649b))
+* **deps:** update module github.com/hbstack/header to v0.11.1 ([36a6f29](https://github.com/hbstack/announcement-bar/commit/36a6f295df7611efb8c86ec7d087ca2d35bc5211))
+* **deps:** update module github.com/hbstack/header to v0.11.3 ([c60119d](https://github.com/hbstack/announcement-bar/commit/c60119dfd85217bea517e019e6bf1d36cb398189))
+* **deps:** update module github.com/hbstack/header to v0.12.0 ([05bfc29](https://github.com/hbstack/announcement-bar/commit/05bfc290dad176778df2c9c76877b9c96c575062))
+* **deps:** update module github.com/hbstack/header to v0.12.1 ([8690971](https://github.com/hbstack/announcement-bar/commit/869097170e8a197b7b84dffa49c5cb7dbeb1ceed))
+* **deps:** update module github.com/hbstack/header to v0.12.2 ([068719d](https://github.com/hbstack/announcement-bar/commit/068719d3816af260f44b98278d994197a94de2ab))
+* **deps:** update module github.com/hbstack/header to v0.12.3 ([634d080](https://github.com/hbstack/announcement-bar/commit/634d08005879c9d9b65378b1c5de148df43bc00c))
+* **deps:** update module github.com/hbstack/header to v0.12.4 ([d15f952](https://github.com/hbstack/announcement-bar/commit/d15f95278f28fca1d8e7fdb645a2d299ecf369f7))
+* **deps:** update module github.com/hbstack/header to v0.12.5 ([c24bba1](https://github.com/hbstack/announcement-bar/commit/c24bba17c99852177f0fcdb38a203d7289431cdf))
+* **deps:** update module github.com/hbstack/header to v0.12.6 ([88947e5](https://github.com/hbstack/announcement-bar/commit/88947e51c4491051690e45f934dd4573b23f7669))
+* **deps:** update module github.com/hbstack/header to v0.12.7 ([1b3a4a4](https://github.com/hbstack/announcement-bar/commit/1b3a4a4a2b8e6496a86e00b10d5946588681425d))
+* **deps:** update module github.com/hugomods/icons/vendors/bootstrap to v0.5.2 ([f74a6c0](https://github.com/hbstack/announcement-bar/commit/f74a6c05dd82365d9d41182dd885e2cf59792221))
+* **deps:** update module github.com/hugomods/icons/vendors/bootstrap to v0.5.3 ([6f61bed](https://github.com/hbstack/announcement-bar/commit/6f61bedda440506e67e1a917580a3ad704c442df))
+* **deps:** update module github.com/twbs/icons to v1.11.2 ([728da8a](https://github.com/hbstack/announcement-bar/commit/728da8a51373d35cc8a1b57c75740a87e0be86d6))
+* **deps:** update module github.com/twbs/icons to v1.11.3 ([fa2aeba](https://github.com/hbstack/announcement-bar/commit/fa2aebaf037d86b5d4ffc5d5a9d5ad7b168a8028))
+
 ## [0.4.1](https://github.com/hbstack/announcement-bar/compare/v0.4.0...v0.4.1) (2023-09-30)
 
 
