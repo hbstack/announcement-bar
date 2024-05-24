@@ -4,26 +4,28 @@
     "name" "arrow-right"
     "className" "ms-1")
   }}
-  <div class="hb-announcement-bar text-center px-1 py-2 w-100 overflow-hidden border-bottom border-secondary">
-      {{- range $i, $v := sort . "weight" }}
-        {{- if .url }}
-          {{- $url := .url }}
-          {{- with site.GetPage $url }}
-            {{- $url = .RelPermalink }}
-          {{- else }}
-            {{- $url = relURL $url }}
-          {{- end }}
-          <a
-            class="hb-announcement text-decoration-none text-truncate{{ cond (eq $i 0) ` active` `` }}"
-            href="{{ $url }}">
-            {{- $v.title | markdownify -}}
-            {{- $icon -}}
-          </a>
+  <div
+    class="hb-announcement-bar text-center px-1 py-2 w-100 overflow-hidden border-bottom border-secondary">
+    {{- range $i, $v := sort . "weight" }}
+      {{- if .url }}
+        {{- $url := .url }}
+        {{- with site.GetPage $url }}
+          {{- $url = .RelPermalink }}
         {{- else }}
-          <div class="hb-announcement text-truncate{{ cond (eq $i 0) ` active` `` }}">
-            {{- $v.title | markdownify -}}
-          </div>
+          {{- $url = relURL $url }}
         {{- end }}
+        <a
+          class="hb-announcement text-decoration-none text-truncate{{ cond (eq $i 0) ` active` `` }}"
+          href="{{ $url }}">
+          {{- $v.title | markdownify -}}
+          {{- $icon -}}
+        </a>
+      {{- else }}
+        <div
+          class="hb-announcement text-truncate{{ cond (eq $i 0) ` active` `` }}">
+          {{- $v.title | markdownify -}}
+        </div>
       {{- end }}
+    {{- end }}
   </div>
 {{- end }}
