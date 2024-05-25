@@ -1,0 +1,36 @@
+name: Tests
+
+on: push
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        version:
+          - latest
+          - 0.126
+          - 0.125
+        case: [default]
+    runs-on: ubuntu
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ matrix.version }}
+          extended: true
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: ${{ matrix.case }}
+          install: true
+          start: hugo server

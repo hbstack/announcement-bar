@@ -1,0 +1,12 @@
+module:
+  imports:
+    - path: github.com/hbstack/announcement-bar
+    - path: github.com/hbstack/blog
+
+languages:
+  en:
+    weight: 1
+  zh-hans:
+    weight: 2
+  fr:
+    weight: 3
