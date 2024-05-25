@@ -8,16 +8,26 @@ jobs:
       matrix:
         version:
           - latest
-          - 0.126
-          - 0.125
         case: [default]
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - run: sudo apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup caches
+        uses: actions/cache@v4
+        with:
+          path: /home/runner/.cache/hugo_cache
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
 
       - name: Setup Go
         uses: actions/setup-go@v5
@@ -27,10 +37,15 @@ jobs:
         with:
           hugo-version: ${{ matrix.version }}
           extended: true
+      
+      - name: Install dependencies
+        working-directory: tests/${{ matrix.case }}
+        run: npm ci
+
+      - name: Start Hugo server
+        working-directory: tests/${{ matrix.case }}
+        run: hugo server &
 
       - name: Cypress run
-        uses: cypress-io/github-action@v6
-        with:
-          working-directory: ${{ matrix.case }}
-          install: true
-          start: hugo server
+        working-directory: tests/${{ matrix.case }}
+        run: npx cypress run
