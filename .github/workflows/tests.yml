@@ -30,7 +30,7 @@ jobs:
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
-        working-directory: ${{ matrix.case }}
         with:
-          build: npm ci
-          start: npm start
+          working-directory: ${{ matrix.case }}
+          install: true
+          start: hugo server
