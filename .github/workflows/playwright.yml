@@ -1,26 +1,20 @@
-name: Tests
-
-on: push
-
+name: Playwright Tests
+on:
+  push:
 jobs:
-  build:
+  test:
     strategy:
       matrix:
         version:
           - latest
         case: [default]
+    timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - run: sudo apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 20
-
+          node-version: lts/*
       - name: Setup caches
         uses: actions/cache@v4
         with:
@@ -28,24 +22,25 @@ jobs:
           key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
-
       - name: Setup Go
         uses: actions/setup-go@v5
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: ${{ matrix.version }}
           extended: true
-      
       - name: Install dependencies
         working-directory: tests/${{ matrix.case }}
         run: npm ci
-
-      - name: Start Hugo server
+      - name: Install Playwright Browsers
         working-directory: tests/${{ matrix.case }}
-        run: hugo server &
-
-      - name: Cypress run
+        run: npx playwright install --with-deps
+      - name: Run Playwright tests
         working-directory: tests/${{ matrix.case }}
-        run: npx cypress run
+        run: npx playwright test
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report
+          path: tests/${{ matrix.case }}/playwright-report/
+          retention-days: 30
