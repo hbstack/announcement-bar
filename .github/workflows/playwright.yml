@@ -23,7 +23,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
       - name: Setup Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
