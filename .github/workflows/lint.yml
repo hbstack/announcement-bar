@@ -9,6 +9,6 @@ jobs:
     container:
       image: hugomods/hugo:exts
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - run: npm ci
       - run: npm run lint
